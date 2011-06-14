@@ -1,6 +1,5 @@
 package uk.co.baremedia.gnomo.mobile.view.mediators
 {
-<<<<<<< HEAD
 	import org.robotlegs.core.IInjector;
 	import org.robotlegs.mvcs.MediatorInit;
 	
@@ -26,13 +25,6 @@ package uk.co.baremedia.gnomo.mobile.view.mediators
 		override public function onRemove():void
 		{
 			_view.presentationModel.dispose();	
-=======
-	
-	public class MediatorUnits
-	{
-		public function MediatorUnits()
-		{
->>>>>>> 74a533ae54ee5e0abb476d4878d312a7eaa13ba6
 		}
 	}
 }

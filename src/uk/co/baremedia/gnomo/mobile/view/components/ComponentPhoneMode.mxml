@@ -5,15 +5,12 @@
 	<fx:Declarations>
 		<!-- Place non-visual elements (e.g., services, value objects) here -->
 	</fx:Declarations>
-<<<<<<< HEAD
 	<fx:Script>
 		<![CDATA[
 			import uk.co.baremedia.gnomo.presentation.PresentationScreenConnect;
 			[Bindable] public var presentationModel:PresentationScreenConnect;
 		]]>
 	</fx:Script>
-=======
->>>>>>> 74a533ae54ee5e0abb476d4878d312a7eaa13ba6
 	
 	<s:layout>
 		<s:VerticalLayout

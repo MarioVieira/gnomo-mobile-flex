@@ -18,15 +18,8 @@
 	
 	<fx:Script>
 		<![CDATA[ 
-<<<<<<< HEAD
 			import uk.co.baremedia.gnomo.mobile.view.presentation.PresentationUnits;
 			[Bindable] public var presentationModel:PresentationUnits;
-=======
-			import uk.co.baremedia.gnomo.presentation.PresentationBabyAndParentUnit;
-			
-			[Bindable] public var presentationModel:PresentationBabyAndParentUnit;
-			
->>>>>>> 74a533ae54ee5e0abb476d4878d312a7eaa13ba6
 		]]>
 	</fx:Script>
 	
@@ -38,20 +31,12 @@
 	<s:HGroup>
 		<s:Button 
 			label="wireless mode" 
-<<<<<<< HEAD
 			click="" 
-=======
-			click="presentationModel.changeConnectedMode(true);" 
->>>>>>> 74a533ae54ee5e0abb476d4878d312a7eaa13ba6
 			width="150"
 			height="50"/>
 		<s:Button 
 			label="phone mode" 
-<<<<<<< HEAD
 			click="" 
-=======
-			click="presentationModel.changeConnectedMode(false);" 
->>>>>>> 74a533ae54ee5e0abb476d4878d312a7eaa13ba6
 			width="150"
 			height="50"/>
 	</s:HGroup>
@@ -59,21 +44,13 @@
 	<s:HGroup>
 		<s:Button 
 			label="baby unit" 
-<<<<<<< HEAD
 			click="" 
-=======
-			click="presentationModel.changeUnitMode(true);" 
->>>>>>> 74a533ae54ee5e0abb476d4878d312a7eaa13ba6
 			width="150"
 			height="50"/>
 		
 		<s:Button 
 			label="parent unit" 
-<<<<<<< HEAD
 			click="" 
-=======
-			click="presentationModel.changeUnitMode(false);" 
->>>>>>> 74a533ae54ee5e0abb476d4878d312a7eaa13ba6
 			width="150"
 			height="50"/>	
 	</s:HGroup>
@@ -81,45 +58,25 @@
 	<s:Label 
 		width="100%" 
 		color="blue" 
-<<<<<<< HEAD
 		text=""/>
 	
 	<s:Label 
 		width="100%" color="red" 
 		text=""/>
-=======
-		text="{ presentationModel.connectedStatus }"/>
-	
-	<s:Label 
-		width="100%" color="red" 
-		text="{ presentationModel.modeStatus }"/>
->>>>>>> 74a533ae54ee5e0abb476d4878d312a7eaa13ba6
 	  
 	<s:TextArea
 		width="100%" height="150" 
 		editable="false"
-<<<<<<< HEAD
 		text=""/>
-=======
-		text="{ presentationModel.systemNotifications }"/>
->>>>>>> 74a533ae54ee5e0abb476d4878d312a7eaa13ba6
 	
 	<s:TextArea
 		width="100%" height="150" color="green"
 		editable="false"
-<<<<<<< HEAD
 		text=""/>
 	
 	<s:Button 
 		label="flush log" 
 		click="" 
-=======
-		text="{ presentationModel.debugInfo }"/>
-	
-	<s:Button 
-		label="flush log" 
-		click="presentationModel.clearLogs()" 
->>>>>>> 74a533ae54ee5e0abb476d4878d312a7eaa13ba6
 		width="150"
 		height="50"/>
 	
