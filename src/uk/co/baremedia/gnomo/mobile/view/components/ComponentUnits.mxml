@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:View xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		xmlns:s="library://ns.adobe.com/flex/spark" 
+		
+		title="ComponentBabyUnit" xmlns:p2p="com.projectcocoon.p2p.*">
+	
+	<s:layout>
+		
+		<s:VerticalLayout
+			paddingBottom="20"
+			paddingTop="20"
+			paddingLeft="20"
+			paddingRight="20"
+			horizontalAlign="center"
+			verticalAlign="middle"/>
+		
+	</s:layout>
+	
+	<fx:Script>
+		<![CDATA[ 
+			import uk.co.baremedia.gnomo.mobile.view.presentation.PresentationUnits;
+			[Bindable] public var presentationModel:PresentationUnits;
+		]]>
+	</fx:Script>
+	
+	<fx:Declarations>
+
+		
+	</fx:Declarations>
+	
+	<s:HGroup>
+		<s:Button 
+			label="wireless mode" 
+			click="" 
+			width="150"
+			height="50"/>
+		<s:Button 
+			label="phone mode" 
+			click="" 
+			width="150"
+			height="50"/>
+	</s:HGroup>
+	
+	<s:HGroup>
+		<s:Button 
+			label="baby unit" 
+			click="" 
+			width="150"
+			height="50"/>
+		
+		<s:Button 
+			label="parent unit" 
+			click="" 
+			width="150"
+			height="50"/>	
+	</s:HGroup>
+	
+	<s:Label 
+		width="100%" 
+		color="blue" 
+		text=""/>
+	
+	<s:Label 
+		width="100%" color="red" 
+		text=""/>
+	  
+	<s:TextArea
+		width="100%" height="150" 
+		editable="false"
+		text=""/>
+	
+	<s:TextArea
+		width="100%" height="150" color="green"
+		editable="false"
+		text=""/>
+	
+	<s:Button 
+		label="flush log" 
+		click="" 
+		width="150"
+		height="50"/>
+	
+</s:View>

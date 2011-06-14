@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:View xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		xmlns:s="library://ns.adobe.com/flex/spark">
+	<fx:Declarations>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+	</fx:Declarations>
+	<fx:Script>
+		<![CDATA[
+			import uk.co.baremedia.gnomo.models.ModelLanguage;
+			[Bindable] public var presentationModel:PresentationScreenModes;
+		]]>
+	</fx:Script>
+	
+	<s:layout>
+		<s:VerticalLayout
+			verticalAlign="middle"
+			horizontalAlign="center"
+			paddingTop="10"
+			paddingBottom="10"
+			paddingRight="10"
+			paddingLeft="10"/>
+	</s:layout>
+	
+	<s:Button
+		label="{ModelLanguage.screenModesButtonWireless}"
+		click="presentationModel.changeConnectedMode(true);"/>
+	
+	<s:Button
+		label="{ModelLanguage.screenModesButtonPhone}"
+		click="presentationModel.changeConnectedMode(false);"/>
+	
+	<fx:Script>
+		<![CDATA[
+			import uk.co.baremedia.gnomo.presentation.PresentationScreenModes;
+			
+			[Bindable] protected var presentation:PresentationScreenModes;
+			
+			override protected function childrenCreated():void
+			{
+				trace("ModelLanguage.screenModesButtonWireless - "+ModelLanguage.screenModesButtonWireless);
+			}
+		]]>
+	</fx:Script>
+	
+</s:View>
