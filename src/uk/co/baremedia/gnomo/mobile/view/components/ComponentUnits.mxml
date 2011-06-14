@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:View xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		xmlns:s="library://ns.adobe.com/flex/spark" 
+		
+		title="ComponentBabyUnit" xmlns:p2p="com.projectcocoon.p2p.*">
+	
+	<s:layout>
+		
+		<s:VerticalLayout
+			paddingBottom="20"
+			paddingTop="20"
+			paddingLeft="20"
+			paddingRight="20"
+			horizontalAlign="center"
+			verticalAlign="middle"/>
+		
+	</s:layout>
+	
+	<fx:Script>
+		<![CDATA[ 
+			import uk.co.baremedia.gnomo.presentation.PresentationBabyAndParentUnit;
+			
+			[Bindable] public var presentationModel:PresentationBabyAndParentUnit;
+			
+		]]>
+	</fx:Script>
+	
+	<fx:Declarations>
+
+		
+	</fx:Declarations>
+	
+	<s:HGroup>
+		<s:Button 
+			label="wireless mode" 
+			click="presentationModel.changeConnectedMode(true);" 
+			width="150"
+			height="50"/>
+		<s:Button 
+			label="phone mode" 
+			click="presentationModel.changeConnectedMode(false);" 
+			width="150"
+			height="50"/>
+	</s:HGroup>
+	
+	<s:HGroup>
+		<s:Button 
+			label="baby unit" 
+			click="presentationModel.changeUnitMode(true);" 
+			width="150"
+			height="50"/>
+		
+		<s:Button 
+			label="parent unit" 
+			click="presentationModel.changeUnitMode(false);" 
+			width="150"
+			height="50"/>	
+	</s:HGroup>
+	
+	<s:Label 
+		width="100%" 
+		color="blue" 
+		text="{ presentationModel.connectedStatus }"/>
+	
+	<s:Label 
+		width="100%" color="red" 
+		text="{ presentationModel.modeStatus }"/>
+	  
+	<s:TextArea
+		width="100%" height="150" 
+		editable="false"
+		text="{ presentationModel.systemNotifications }"/>
+	
+	<s:TextArea
+		width="100%" height="150" color="green"
+		editable="false"
+		text="{ presentationModel.debugInfo }"/>
+	
+	<s:Button 
+		label="flush log" 
+		click="presentationModel.clearLogs()" 
+		width="150"
+		height="50"/>
+	
+</s:View>

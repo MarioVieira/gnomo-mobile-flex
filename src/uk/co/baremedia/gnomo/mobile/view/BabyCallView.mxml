@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:View xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		xmlns:s="library://ns.adobe.com/flex/spark" 
+		title="Baby Call"
+		
+		gestureSwipe="handleSwipe(event)">
+	
+	<fx:Declarations>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+	</fx:Declarations>
+	
+	<!--<s:navigationContent>
+		<s:Button id="babyUnit" label="Baby Unit" click="onNavigate_clickHandler(event)"/>
+		<s:Button id="parentUnit" label="Parent Unit" click="onNavigate_clickHandler(event)"/>
+	</s:navigationContent>-->
+	
+	<s:ViewNavigator
+		id="viewPlaceholder"
+		width="100%"
+		height="100%"
+		firstView="uk.co.baremedia.gnomo.mobile.view.components.ComponentUnits"/>
+	
+	
+	
+	<fx:Script>
+		<![CDATA[
+			import uk.co.baremedia.gnomo.mobile.view.components.ComponentScreenConnect;
+			import spark.transitions.SlideViewTransition;
+			import spark.transitions.SlideViewTransitionMode;
+			import spark.transitions.ViewTransitionDirection;
+			
+			import uk.co.baremedia.gnomo.mobile.view.components.ComponentUnits;
+			
+			override protected function childrenCreated():void
+			{
+				trace("createChildren - "+viewPlaceholder.navigationContent);
+			}
+			
+			protected function onNavigate_clickHandler(event:MouseEvent):void
+			{
+				trace("onNavigate_clickHandler");
+				//pushBabyCallView( (event.target == babyUnit) ? ComponentBabyUnit : ParentUnit);					 
+			}
+			
+			private function handleSwipe(event:TransformGestureEvent):void
+			{
+				trace("handleSwipe - event.offsetX: "+event.offsetX);
+				// Swipe was to the right
+				if (event.offsetX == 1 ) 
+				{
+					pushBabyCallView(ComponentUnits);
+				}
+				// Swipe was to the left
+				else if (event.offsetX == -1 ) 
+				{
+					pushBabyCallView(ComponentScreenConnect);
+				}
+			} 
+			
+			protected function pushBabyCallView(view:Class):void
+			{
+				trace("viewPlaceholder.activeView as Class: "+ viewPlaceholder.activeView +" view: "+view+ " activeView.className: "+ viewPlaceholder.activeView.className+"  view.toString(): "+view.toString() );
+				
+				if( !(viewPlaceholder.activeView is view) )
+				{
+					var startView:Class 	= (view == ComponentScreenConnect) 				? ComponentUnits 	: ComponentScreenConnect;
+					var endView:Class 		= (startView == ComponentUnits) 	? ComponentScreenConnect  			: ComponentUnits;
+					var direction:String 	= (endView == ComponentScreenConnect) 	? ViewTransitionDirection.LEFT 	: ViewTransitionDirection.RIGHT;
+					
+					viewPlaceholder.pushView(endView, null, null, getViewSlideTransition(startView as View, endView as View, direction) );
+				}
+				else
+				{
+					trace("asking to push active view AGAIN: "+view);
+				} 
+			}
+			
+			private function getViewSlideTransition(startView:View, endView:View, direction:String, mode:String = SlideViewTransitionMode.PUSH, duration:Number = 300, transitionControlsWithContent:Boolean = false):SlideViewTransition
+			{
+				var transition:SlideViewTransition = new SlideViewTransition();
+				
+				transition.startView = this;
+				transition.endView   = endView;
+				transition.mode 	 = mode;
+				transition.direction = direction;
+				transition.duration  = duration;
+				transition.transitionControlsWithContent = transitionControlsWithContent;
+				
+				return transition;
+			}
+			
+		]]>
+	</fx:Script>
+	
+</s:View>
