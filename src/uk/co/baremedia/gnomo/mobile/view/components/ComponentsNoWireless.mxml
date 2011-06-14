@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <s:View xmlns:fx="http://ns.adobe.com/mxml/2009" 
 		xmlns:s="library://ns.adobe.com/flex/spark" title="Settings">
+<<<<<<< HEAD
 	
 	<fx:Declarations>
 		<!-- Place non-visual elements (e.g., services, value objects) here -->
@@ -12,6 +13,19 @@
 		]]>
 	</fx:Script>
 	
+=======
+	<fx:Script>
+		<![CDATA[
+			import uk.co.baremedia.gnomo.mobile.view.presentation.PresentationNoWireless;
+			public var presentationModel:PresentationNoWireless;
+		]]>
+	</fx:Script>
+	
+	<fx:Declarations>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+	</fx:Declarations>
+	
+>>>>>>> 74a533ae54ee5e0abb476d4878d312a7eaa13ba6
 	<s:layout>
 		<s:VerticalLayout
 			verticalAlign="middle"
