@@ -7,6 +7,7 @@ package uk.co.baremedia.gnomo.mobile.view.mediators
 	import uk.co.baremedia.gnomo.controls.ControlUnits;
 	import uk.co.baremedia.gnomo.mobile.view.components.ComponentScreenModes;
 	import uk.co.baremedia.gnomo.models.ModelDeviceInfo;
+	import uk.co.baremedia.gnomo.models.Locale;
 	import uk.co.baremedia.gnomo.presentation.PresentationScreenModes;
 	
 	public class MediatorScreenModes extends MediatorInit
@@ -24,7 +25,7 @@ package uk.co.baremedia.gnomo.mobile.view.mediators
 		
 		override public function onRegister():void
 		{ 
-			Tracer.log(this, "onRegister - ModelLanguage.screenModesButtonWireless: "+ModelLanguage.screenModesButtonWireless);
+			Tracer.log(this, "onRegister - ModelLanguage.screenModesButtonWireless: "+Locale.screenModesButtonWireless);
 			
 			_view.presentationModel = new PresentationScreenModes(_injector.getInstance(ControlUnits), _injector.getInstance(ModelDeviceInfo));
 		}

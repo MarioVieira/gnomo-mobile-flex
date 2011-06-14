@@ -4,41 +4,52 @@
 	<fx:Declarations>
 		<!-- Place non-visual elements (e.g., services, value objects) here -->
 	</fx:Declarations>
+	
 	<fx:Script>
 		<![CDATA[
-			import uk.co.baremedia.gnomo.models.ModelLanguage;
+			import uk.co.baremedia.gnomo.models.Locale;
 			[Bindable] public var presentationModel:PresentationScreenModes;
 		]]>
 	</fx:Script>
 	
-	<s:layout>
-		<s:VerticalLayout
-			verticalAlign="middle"
-			horizontalAlign="center"
-			paddingTop="10"
-			paddingBottom="10"
-			paddingRight="10"
-			paddingLeft="10"/>
-	</s:layout>
+	<s:VGroup
+		width="100%"
+		height="100%"
+		verticalAlign="middle"
+		horizontalAlign="center"
+		paddingTop="10"
+		paddingBottom="10"
+		paddingRight="10"
+		paddingLeft="10">
+		
+		<s:Button
+			height="50" 
+			label="{ Locale.screenModesButtonWireless }"
+			click="presentationModel.changeConnectedMode(true);"/>
+		
+		<s:TextArea
+			height="200"
+			editable="false"
+			text="{ Locale.screenModeWirelessFunction }"/>
+		
+		<s:Button
+			label="{ Locale.screenModesButtonPhone }"
+			height="50"
+			click="presentationModel.changeConnectedMode(false);"
+			visible="{ presentation.isMobileType }" />
+		
+		<s:TextArea
+			height="200"
+			text="{ Locale.screenModePhoneFunction }"/>
+		
+	</s:VGroup>
 	
-	<s:Button
-		label="{ModelLanguage.screenModesButtonWireless}"
-		click="presentationModel.changeConnectedMode(true);"/>
-	
-	<s:Button
-		label="{ModelLanguage.screenModesButtonPhone}"
-		click="presentationModel.changeConnectedMode(false);"/>
 	
 	<fx:Script>
 		<![CDATA[
 			import uk.co.baremedia.gnomo.presentation.PresentationScreenModes;
 			
 			[Bindable] protected var presentation:PresentationScreenModes;
-			
-			override protected function childrenCreated():void
-			{
-				trace("ModelLanguage.screenModesButtonWireless - "+ModelLanguage.screenModesButtonWireless);
-			}
 		]]>
 	</fx:Script>
 	
