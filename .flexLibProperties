@@ -1,27 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <flexLibProperties includeAllClasses="true" useMultiPlatformConfig="true" version="3">
-  <includeClasses>
-    <classEntry path="uk.co.baremedia.gnomo.mobile.view.components.ComponentTryAgain"/>
-    <classEntry path="uk.co.baremedia.gnomo.mobile.view.components.ComponentScreenConnect"/>
-    <classEntry path="uk.co.baremedia.gnomo.mobile.view.components.ComponentUnits"/>
-    <classEntry path="uk.co.baremedia.gnomo.mobile.view.components.ComponentScreenModes"/>
-    <classEntry path="uk.co.baremedia.gnomo.mobile.view.components.ComponentsNoWireless"/>
-    <classEntry path="uk.co.baremedia.gnomo.mobile.view.BabyCallView"/>
-    <classEntry path="uk.co.baremedia.gnomo.mobile.core.MapViews"/>
-    <classEntry path="uk.co.baremedia.gnomo.mobile.view.mediators.MediatorScreenModes"/>
-    <classEntry path="uk.co.baremedia.gnomo.mobile.core.CoreAppScreens"/>
-    <classEntry path="uk.co.baremedia.gnomo.mobile.view.mediators.MediatorNoWireless"/>
-    <classEntry path="uk.co.baremedia.gnomo.mobile.view.mediators.MediatorScreenConnect"/>
-    <classEntry path="uk.co.baremedia.gnomo.mobile.view.mediators.MediatorUnits"/>
-    <classEntry path="uk.co.baremedia.gnomo.mobile.view.mediators.MediatorScreenDisconnected"/>
-    <classEntry path="uk.co.baremedia.gnomo.mobile.view.mediators.MediatorScreenPhoneMode"/>
-    <classEntry path="uk.co.baremedia.gnomo.mobile.view.mediators.MediatorScreenTryAgain"/>
-<<<<<<< HEAD
-    <classEntry path="uk.co.baremedia.gnomo.mobile.view.presentation.PresentationUnits"/>
-=======
-    <classEntry path="uk.co.baremedia.gnomo.mobile.view.presentation.PresentationNoWireless"/>
->>>>>>> 74a533ae54ee5e0abb476d4878d312a7eaa13ba6
-  </includeClasses>
+  <includeClasses/>
   <includeResources/>
   <namespaceManifests/>
 </flexLibProperties>

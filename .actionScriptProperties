@@ -28,8 +28,8 @@
       </libraryPathEntry>
       <libraryPathEntry kind="3" linkType="1" path="/lib-gnomo/bin/lib-gnomo.swc" useDefaultLinkType="false"/>
       <libraryPathEntry kind="3" linkType="1" path="/mvcs-injector/bin/mvcs-injector.swc" useDefaultLinkType="false"/>
-      <libraryPathEntry kind="3" linkType="1" path="/Robotlegs/bin/Robotlegs.swc" useDefaultLinkType="false"/>
       <libraryPathEntry kind="3" linkType="1" path="/Signals/bin/Signals.swc" useDefaultLinkType="false"/>
+      <libraryPathEntry kind="3" linkType="1" path="/RobotlegsInitializer/bin/RobotlegsInitializer.swc" useDefaultLinkType="false"/>
     </libraryPath>
     <sourceAttachmentPath/>
   </compiler>

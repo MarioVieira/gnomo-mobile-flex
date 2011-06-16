@@ -6,38 +6,42 @@
 	</fx:Declarations>
 	<fx:Script>
 		<![CDATA[
+			import uk.co.baremedia.gnomo.models.Locale;
 			import uk.co.baremedia.gnomo.presentation.PresentationScreenConnect;
 			[Bindable] public var presentationModel:PresentationScreenConnect;
 		]]>
 	</fx:Script>
 	
-	<s:layout>
-		<s:VerticalLayout
-			verticalAlign="middle"
-			horizontalAlign="center"
-			paddingTop="10"
-			paddingBottom="10"
-			paddingRight="10"
-			paddingLeft="10"/>
-	</s:layout>
-	
-	<s:TextArea
-		editable="false"
-		text="Instructions (1, 2,3)"/>
-	
-	<s:Button
-		label="connect"
-		click=""/>
+	<s:VGroup
+		width="100%"
+		height="100%"
+		verticalAlign="middle"
+		horizontalAlign="center"
+		paddingTop="10"
+		paddingBottom="10"
+		paddingRight="10"
+		paddingLeft="10">
+		
+		<s:TextArea
+			height="400"
+			editable="false"
+			text="{ Locale.screenConnectTextMessage }"/>
+		
+		<s:Button
+			label="{ Locale.screenConnectButtonConnect }"
+			click="{ presentationModel.connect(); }"/>
+		
+		
+		<s:Button
+			label="{ Locale.buttonBack }"
+			click="{ presentationModel.requestScreenModes(); }"/>
+		
+	</s:VGroup>
 	
 	<fx:Script>
 		<![CDATA[
 			
-			
-			
-			
-			
 		]]>
 	</fx:Script>
-	
 	
 </s:View>

@@ -11,12 +11,12 @@ package uk.co.baremedia.gnomo.utils
 			{
 				var transition:SlideViewTransition = new SlideViewTransition();
 				
-				transition.startView = startView;
+				/*transition.startView = startView;
 				transition.endView   = endView;
 				transition.mode 	 = mode;
 				transition.direction = direction;
 				transition.duration  = duration;
-				transition.transitionControlsWithContent = transitionControlsWithContent;
+				transition.transitionControlsWithContent = transitionControlsWithContent;*/
 				
 				return transition;
 			}
