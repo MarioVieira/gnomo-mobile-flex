@@ -19,13 +19,13 @@ package uk.co.baremedia.gnomo.mobile.view.mediators
 	
 		override public function onRegister():void
 		{ 
-			Tracer.log(this, "onRegister()");
+			//Tracer.log(this, "onRegister()");
 			_view.presentationModel = new PresentationNoWireless();
 		}
 		
 		override public function onRemove():void
 		{
-			Tracer.log(this, "onRemove()");
+			//Tracer.log(this, "onRemove()");
 			_view.presentationModel.dispose();
 		}
 	}
